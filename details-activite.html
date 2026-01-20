@@ -9,7 +9,30 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
+    <!-- HEADER         -->
+    <header class="relative flex items-center justify-between px-4 md:px-8 py-3 bg-white border-b border-gray-200"> 
+        <div class="flex flex-1 items-center md:hidden">
+            <button aria-label="Open navigation menu" class="p-2 hover:bg-gray-100 rounded-lg cursor-pointer">
+            <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <div class="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:flex-none flex items-center space-x-2">
+            <img src="images/Viator_logo.png" alt="Viator" class="h-5 md:h-8">
+            <button class="hidden md:block text-sm font-medium hover:text-green-700 whitespace-nowrap cursor-pointer">
+                Discover &gt;
+            </button>
+        </div>
+
+  <div class="flex flex-1 items-center justify-end space-x-2 md:space-x-5">
+    <button aria-label="worldwide" class="hidden md:block hover:bg-gray-100 rounded-full"><i class="fa-solid fa-earth-africa"></i></button>
+    <button aria-label="rewards" class="hidden md:block hover:bg-gray-100 rounded-full"><i class="fa-solid fa-gift"></i></button>
     
+    <button aria-label="user-profile" class="flex items-center space-x-2 border border-gray-300 rounded-full px-4 py-2 hover:shadow-md cursor-pointer">
+      <span class="text-lg"><i class="fa-solid fa-user"></i></span>
+    </button>
+  </div>
+</header>
 </body>
 
 <!-- Footer -->
