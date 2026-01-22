@@ -23,7 +23,7 @@
                 Discover &gt;
             </button>
         </div>
-        <div class="flex items-center border rounded-full mx-8 px-4 py-2 w-full max-w-md">
+        <div class="hidden sm:flex items-center border rounded-full mx-8 px-4 py-2 w-full max-w-md">
             <span class="text-gray-400 mr-2"><i class="fa-solid fa-magnifying-glass"></i></span>
             <input type="text" placeholder="search your direction"class="w-full outline-none text-sm"/>
         </div>
@@ -79,7 +79,7 @@
         <div class="w-7/12 h-auto">
             <img src="images/details-activites (2).jpg" alt="" class="w-full h-full rounded outline-1 object-cover">
         </div>  
-<div class="w-4/12 h-auto border rounded-xl flex flex-col text items-center justify-center p-6 gap-1 shadow-sm">
+<div class="w-4/12 h-auto border rounded-xl border-gray-400 flex flex-col text items-start justify-center p-3 gap-1 shadow-sm">
     
     <div class="bg-red-50 text-red-600 text-xs font-medium px-2 py-1 rounded flex items-center gap-1 mb-2">
         <span>🕒</span> Ends January 27
@@ -88,7 +88,7 @@
     <p class="text-sm text-gray-600">From</p>
     
     <div class="flex items-baseline gap-2">
-        <span class="text-2xl font-bold text-red-600">-17%</span>
+        <span class="text-2xl font-bold text-[#BF292C]">-17%</span>
         <span class="text-3xl font-bold text-black">$53.22</span>
         <span class="text-sm text-gray-500">per person</span>
     </div>
@@ -127,6 +127,56 @@
     </div>       
     </div>  
 </div>
+        <hr class="border-t border-gray-200 m-6">
+<!-- REVIEWS SECTION -->
+        <div class="m-8">
+            <h3 class="text-2xl font-bold">Reviews</h3>
+            <div class="flex flex-row justify-around my-4">
+                <div class="flex flex-col items-center gap-2">
+                    <h1 class="text-2xl font-bold">4.8</h1>
+                    <div><i class="fa-solid fa-star size-4 text-green-700"></i><i class="fa-solid fa-star size-4 text-green-700"></i><i class="fa-solid fa-star size-4 text-green-700"></i><i class="fa-solid fa-star size-4 text-green-700"></i><i class="fa-solid fa-star size-4 text-green-700"></i></div>
+                    <h2>based on 973 reviews</h2>
+                </div>
+                 <div class="flex flex-col gap-2">
+                    <h3>Total reviews and rating from clients</h3>
+                        <div class="flex items-center gap-4 w-full">
+                            <span class="text-sm font-medium text-gray-700 whitespace-nowrap">5 stars</span>
+                                <div class="flex-1 h-3 bg-gray-200 rounded-full w-72">
+                                <div class="h-full bg-emerald-500 rounded-full w-[100%]"></div>
+                                </div>
+                            <span class="text-sm font-medium text-gray-900">856</span>
+                        </div>
+                        <div class="flex items-center gap-4 w-full">
+                            <span class="text-sm font-medium text-gray-700 whitespace-nowrap">4 stars</span>
+                                <div class="flex-1 h-3 bg-gray-200 rounded-full w-72">
+                                <div class="h-full bg-emerald-500 rounded-full w-[60%]"></div>
+                                </div>
+                            <span class="text-sm font-medium text-gray-900">61</span>
+                        </div>
+                        <div class="flex items-center gap-4 w-full">
+                            <span class="text-sm font-medium text-gray-700 whitespace-nowrap">3 stars</span>
+                                <div class="flex-1 h-3 bg-gray-200 rounded-full w-72">
+                                <div class="h-full bg-emerald-500 rounded-full w-[35%]"></div>
+                                </div>
+                            <span class="text-sm font-medium text-gray-900">29</span>
+                        </div>
+                        <div class="flex items-center gap-4 w-full">
+                            <span class="text-sm font-medium text-gray-700 whitespace-nowrap">2 stars</span>
+                                <div class="flex-1 h-3 bg-gray-200 rounded-full w-72">
+                                <div class="h-full bg-emerald-500 rounded-full w-[35%]"></div>
+                                </div>
+                            <span class="text-sm font-medium text-gray-900">15</span>
+                        </div>
+                        <div class="flex items-center gap-4 w-full">
+                            <span class="text-sm font-medium text-gray-700 whitespace-nowrap">1 stars</span>
+                                <div class="flex-1 h-3 bg-gray-200 rounded-full w-72">
+                                <div class="h-full bg-emerald-500 rounded-full w-[10%]"></div>
+                                </div>
+                            <span class="text-sm font-medium text-gray-900">7</span>
+                        </div>
+                </div> 
+            </div> 
+        </div>
     <!-- REVIEWS -->
      <div class="flex flex-col m-8">
     <hr class="border-t border-gray-200 my-6">
@@ -180,80 +230,152 @@
     <hr class="border-t border-gray-200 my-6">
      </div>
 
+
 <!-- OVERVIEW HEADWRAPPER -->
-     <div class="flex flex-col items-center m-8">
-        <div id="accordion1" class="accordion-item" open>
+     <div class="flex flex-col m-8">
+        <details id="accordion1" class="accordion-item" close>
             <summary class="accordion-header">
-                <span class="font-bold text-xl">OVERVIEW</span>
-                <i class="fa-solid fa-chevron-down icon"></i>
+                <span href="" class="font-bold text-xl sticky">OVERVIEW</span>
             </summary>
             <div class="accordion-content">
-                <h4>Main</h4>
-                <p><strong>Your Own Pizza</strong></p>
-                <p>You can pick between different types of classic Italian pizzas you'd like to make!</p>
+                <h4>• A small-group pizza-making workshop in Rome’s historic center
+• Learn the ins and outs of traditional Roman pizzas, from the sauce to toppings
+• Get hands-on tips and guidance within a small group
+• Enjoy your own freshly made pizza paired with soft and alcoholic drinks</h4>
+                <p><strong>Why Travelers Choose This Tour</strong></p>
+                <p>Enhance your pizza feast with prosecco, limoncello or coffee, 
+                    and a glass of wine, beer, or soda.
+                    Head to a real Roman restaurant in the heart 
+                    of the city for a hands-on pizza-making lesson 
+                    during this small-group cooking workshop. Head 
+                    to the location near the famous Piazza Navona 
+                    and get personalized instruction from a local 
+                    chef as you prepare the dough and traditional 
+                    Italian toppings. Learn a recipe that you … Read more</p>
             </div>
-        </div>
-
+        </details>
      </div>
 
     <hr class="border-t border-gray-200 m-6">
 
 
 <!-- TRAVELER PHOTOS -->
-        <div class="m-8">
+<div class="m-8">
+    <h3 class="text-2xl font-bold">Traveler Photos</h3>
+    <div class="grid grid-cols-2 gap-4 my-4">
+        <img src="images/gallery-3.jpg" alt="" class="h-96 w-full object-cover rounded">
 
+        <div class="grid grid-cols-2 grid-rows-2 gap-2 h-96"> 
+            <a href="" class="h-full"><img src="images/details-activites (7).jpg" alt="" class="h-full w-full rounded object-cover"></a>
+            <a href="" class="h-full"><img src="images/gallery-1.jpg" alt="" class="h-full w-full object-cover rounded"></a>
+            <a href="" class="h-full"><img src="images/gallery-2.jpg" alt="" class="h-full w-full object-cover rounded"></a>
+            <a href="" class="h-full"><img src="images/gallery-4.jpg" alt="" class="h-full w-full object-cover rounded"></a>
         </div>
+    </div>    
+</div>
+<hr class="border-t border-gray-200 m-6">
 
-<!-- REVIEWS SECTION -->
-        <div class="m-8">
-            <h3 class="text-2xl font-bold">Reviews</h3>
-            <div class="flex flex-row justify-around my-4">
-                <div class="flex flex-col items-center gap-2">
-                    <h1 class="text-2xl font-bold">4.8</h1>
-                    <div><i class="fa-solid fa-star size-4 text-green-700"></i><i class="fa-solid fa-star size-4 text-green-700"></i><i class="fa-solid fa-star size-4 text-green-700"></i><i class="fa-solid fa-star size-4 text-green-700"></i><i class="fa-solid fa-star size-4 text-green-700"></i></div>
-                    <h2>based on 973 reviews</h2>
-                </div>
-                 <div class="flex flex-col gap-2">
-                    <h3>Total reviews and rating from clients</h3>
-                        <div class="flex items-center gap-4 w-full">
-                            <span class="text-sm font-medium text-gray-700 whitespace-nowrap">5 stars</span>
-                                <div class="flex-1 h-3 bg-gray-200 rounded-full w-72">
-                                <div class="h-full bg-emerald-500 rounded-full w-[100%]"></div>
-                                </div>
-                            <span class="text-sm font-medium text-gray-900">856</span>
-                        </div>
-                        <div class="flex items-center gap-4 w-full">
-                            <span class="text-sm font-medium text-gray-700 whitespace-nowrap">4 stars</span>
-                                <div class="flex-1 h-3 bg-gray-200 rounded-full w-72">
-                                <div class="h-full bg-emerald-500 rounded-full w-[60%]"></div>
-                                </div>
-                            <span class="text-sm font-medium text-gray-900">61</span>
-                        </div>
-                        <div class="flex items-center gap-4 w-full">
-                            <span class="text-sm font-medium text-gray-700 whitespace-nowrap">3 stars</span>
-                                <div class="flex-1 h-3 bg-gray-200 rounded-full w-72">
-                                <div class="h-full bg-emerald-500 rounded-full w-[35%]"></div>
-                                </div>
-                            <span class="text-sm font-medium text-gray-900">29</span>
-                        </div>
-                        <div class="flex items-center gap-4 w-full">
-                            <span class="text-sm font-medium text-gray-700 whitespace-nowrap">2 stars</span>
-                                <div class="flex-1 h-3 bg-gray-200 rounded-full w-72">
-                                <div class="h-full bg-emerald-500 rounded-full w-[35%]"></div>
-                                </div>
-                            <span class="text-sm font-medium text-gray-900">15</span>
-                        </div>
-                        <div class="flex items-center gap-4 w-full">
-                            <span class="text-sm font-medium text-gray-700 whitespace-nowrap">1 stars</span>
-                                <div class="flex-1 h-3 bg-gray-200 rounded-full w-72">
-                                <div class="h-full bg-emerald-500 rounded-full w-[10%]"></div>
-                                </div>
-                            <span class="text-sm font-medium text-gray-900">7</span>
-                        </div>
-                </div> 
-            </div> 
-        </div>
-        <hr class="border-t border-gray-200 m-6">
+<!-- Compare Similar Experiences -->
+    <div class="m-8">
+        <h3 class="text-2xl font-bold">Compare Similar Experiences</h3>
+<div id="dest-slider" class="flex flex-row gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4">
+    <div class="flex flex-col items-center rounded-lg shadow-lg gap-2 my-4 p-6 w-80 h-auto text-center">
+        
+        <img src="images/details-activites (2).jpg" alt="" class="w-60 h-60 rounded object-cover">
+
+        <h3 class="font-bold text-sm px-2">Pizza Cooking Class in Rome - Near Piazza Navona</h3>
+        <hr class="border-t border-gray-200 w-60">
+        <div><i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i> 973
+            </div>
+        <hr class="border-t border-gray-200 w-60">
+        <h3>2 hours 30 minutes</h3>
+        <hr class="border-t border-gray-200 w-60">
+        <h3>Free cancellation</h3>
+        <hr class="border-t border-gray-200 w-60">
+        <h3>From $83.38 $68.61</h3>
+    </div>
+        <div class="flex flex-col items-center rounded-lg shadow-lg gap-2 my-4 p-6 w-80 h-auto text-center">
+        
+        <img src="images/details-activites (2).jpg" alt="" class="w-60 h-60 rounded object-cover">
+
+        <h3 class="font-bold text-sm px-2">Pizza Cooking Class in Rome - Near Piazza Navona</h3>
+        <hr class="border-t border-gray-200 w-60">
+        <div><i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i> 973
+            </div>
+        <hr class="border-t border-gray-200 w-60">
+        <h3>2 hours 30 minutes</h3>
+        <hr class="border-t border-gray-200 w-60">
+        <h3>Free cancellation</h3>
+        <hr class="border-t border-gray-200 w-60">
+        <h3>From $83.38 $68.61</h3>
+    </div>
+        <div class="flex flex-col items-center rounded-lg shadow-lg gap-2 my-4 p-6 w-80 h-auto text-center">
+        
+        <img src="images/details-activites (2).jpg" alt="" class="w-60 h-60 rounded object-cover">
+
+        <h3 class="font-bold text-sm px-2">Pizza Cooking Class in Rome - Near Piazza Navona</h3>
+        <hr class="border-t border-gray-200 w-60">
+        <div><i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i> 973
+            </div>
+        <hr class="border-t border-gray-200 w-60">
+        <h3>2 hours 30 minutes</h3>
+        <hr class="border-t border-gray-200 w-60">
+        <h3>Free cancellation</h3>
+        <hr class="border-t border-gray-200 w-60">
+        <h3>From $83.38 $68.61</h3>
+    </div>
+            <div class="flex flex-col items-center rounded-lg shadow-lg gap-2 my-4 p-6 w-80 h-auto text-center">
+        
+        <img src="images/details-activites (2).jpg" alt="" class="w-60 h-60 rounded object-cover">
+
+        <h3 class="font-bold text-sm px-2">Pizza Cooking Class in Rome - Near Piazza Navona</h3>
+        <hr class="border-t border-gray-200 w-60">
+        <div><i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i> 973
+            </div>
+        <hr class="border-t border-gray-200 w-60">
+        <h3>2 hours 30 minutes</h3>
+        <hr class="border-t border-gray-200 w-60">
+        <h3>Free cancellation</h3>
+        <hr class="border-t border-gray-200 w-60">
+        <h3>From $83.38 $68.61</h3>
+    </div>
+            <div class="flex flex-col items-center rounded-lg shadow-lg gap-2 my-4 p-6 w-80 h-auto text-center">
+        
+        <img src="images/details-activites (2).jpg" alt="" class="w-60 h-60 rounded object-cover">
+
+        <h3 class="font-bold text-sm px-2">Pizza Cooking Class in Rome - Near Piazza Navona</h3>
+        <hr class="border-t border-gray-200 w-60">
+        <div><i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i>
+                <i class="fa-solid fa-star size-4 text-green-700"></i> 973
+            </div>
+        <hr class="border-t border-gray-200 w-60">
+        <h3>2 hours 30 minutes</h3>
+        <hr class="border-t border-gray-200 w-60">
+        <h3>Free cancellation</h3>
+        <hr class="border-t border-gray-200 w-60">
+        <h3>From $83.38 $68.61</h3>
+    </div>
+</div>
+    </div>
 </body>
 
 <!-- Footer -->
