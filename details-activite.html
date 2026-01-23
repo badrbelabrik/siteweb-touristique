@@ -37,7 +37,7 @@
     </button>
   </div>
 </header>
-<main class="flex items-start gap-8 mx-52 my-8">
+<main class="flex flex-col items-center md:flex-row md:items-start md:gap-4 md:mx-8 my-8">
 <!-- BREADCRUMBS -->
 <div class="w-9/12">
         <nav class="flex text-sm text-gray-600 space-x-2">
@@ -53,35 +53,35 @@
         </nav>
     <h1 class="font-bold text-3xl my-4">Pizza Cooking Class in Rome - Near Piazza Navona</h1>
 
- <!-- Gallery photos and pricing -->
- 
-    <div class="flex gap-4 mb-2">
+<!-- Gallery photos -->
+
+    <div class="mb-2 md:flex md:gap-4 md:mb-2">
         <h3><i class="fa-solid fa-star text-green-700"></i>
             <i class="fa-solid fa-star text-green-700"></i>
             <i class="fa-solid fa-star text-green-700"></i>
             <i class="fa-solid fa-star text-green-700"></i>
-            <i class="fa-solid fa-star text-green-700"></i> 969 reviews</h3>
-        <span>|</span>
-        <h3><i class="fa-solid fa-certificate text-orange-500"></i> Recommended by 94% of travelers</h3>
-        <span>|</span>
-        <h3><i class="fa-regular fa-circle-check text-blue-600"></i> Badge of Excellence</h3>
-        <span>|</span>
-        <h3><i class="fa-solid fa-location-dot"></i> Rome, Italy</h3>
+            <i class="fa-solid fa-star text-green-700"></i> 969 reviews </h3>
+        
+        <h3><i class="fa-solid fa-certificate text-orange-500"></i> Recommended by 94% of travelers </h3>
+       
+        <h3><i class="fa-regular fa-circle-check text-blue-600"></i> Badge of Excellence </h3>
+        
+        <h3><i class="md:fa-solid md:fa-location-dot"></i> Rome, Italy</h3>
     </div>
     
-<div class="flex flex-row gap-2 h-[450px] items-stretch">
-    <div class="w-1/5 flex flex-col gap-2">
+<div class="flex flex-col-reverse gap-2 md:flex md:flex-row md:gap-2 md:h-[450px] md:items-stretch">
+    <div class="grid grid-cols-2 grid-rows-2 md:w-1/5 md:flex md:flex-col gap-2">
         <a href="" aria-label="View group cooking class photo" class="flex-1 overflow-hidden"><img src="images/details-activites (2).jpg" alt="" class="h-full w-full object-cover rounded hover:scale-105 transition duration-300"></a>
         <a href="" aria-label="View group cooking class photo" class="flex-1 overflow-hidden"><img src="images/details-activites (1).jpg" alt="" class="h-full w-full object-cover rounded hover:scale-105 transition duration-300"></a>
         <a href="" aria-label="View group cooking class photo" class="flex-1 overflow-hidden"><img src="images/details-activites (9).jpg" alt="" class="h-full w-full object-cover rounded hover:scale-105 transition duration-300"></a>
         <a href="" aria-label="View group cooking class photo" class="flex-1 relative overflow-hidden rounded">
-            <img src="images/details-activites (8).jpg" alt="" class="h-full w-full object-cover brightness-50">
+            <img src="images/details-activites (8).jpg" alt="" class="h-full w-full object-right brightness-50">
             <span class="absolute inset-0 flex items-center justify-center text-white font-bold text-sm bg-black/40">See More</span>
         </a>
     </div>
 
-    <div class="flex-1 relative overflow-hidden rounded">
-        <img src="images/details-activites (2).jpg" alt="" class="w-full h-full object-cover">
+    <div class="relative overflow-hidden rounded">
+        <img src="images/details-activites (2).jpg" alt="" class="w-[120%] h-full object-cover">
         <div class="absolute top-4 right-4 flex gap-2">
             <button class="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-md text-sm font-bold flex items-center gap-2 hover:bg-white transition">
                 <i class="fa-solid fa-share-nodes"></i> Share
@@ -93,15 +93,15 @@
     </div>      
 </div>
 
-        <hr class="border-t border-gray-200 m-6">
+        <hr class="border-t border-gray-200 my-6">
 <!-- REVIEWS SECTION -->
         
             <h3 class="text-2xl font-bold">Reviews</h3>
-            <div class="flex flex-row justify-around my-4">
+            <div class="flex flex-col justify-center md:flex md:flex-row md:justify-around my-4">
                 <div class="flex flex-col items-center gap-2">
                     <h1 class="text-2xl font-bold">4.8</h1>
                     <div><i class="fa-solid fa-star size-4 text-green-700"></i><i class="fa-solid fa-star size-4 text-green-700"></i><i class="fa-solid fa-star size-4 text-green-700"></i><i class="fa-solid fa-star size-4 text-green-700"></i><i class="fa-solid fa-star size-4 text-green-700"></i></div>
-                    <h2>based on 973 reviews</h2>
+                    <h2 class="hidden md:block">based on 973 reviews</h2>
                 </div>
                  <div class="flex flex-col gap-2">
                     <h3>Total reviews and rating from clients</h3>
@@ -142,13 +142,13 @@
                         </div>
                 </div> 
             </div> 
-        
+    <hr class="hidden md:block md:border-t md:border-gray-200 md:my-6">    
     <!-- REVIEWS -->
      <div class="flex flex-col">
-    <hr class="border-t border-gray-200 my-6">
+    
         <div class="flex justify-between">
-            <h3 class="text-2xl font-bold">Why travelers loved this</h3>
-            <h3><i class="fa-solid fa-star text-green-700"></i>4.8 -  969 reviews</h3>
+            <h3 class="hidden md:block md:text-2xl md:font-bold">Why travelers loved this</h3>
+            <h3 class="hidden md:block"><i class="fa-solid fa-star text-green-700"></i>4.8 -  969 reviews</h3>
         </div>
         <div class="row-auto my-2">
             <div class="rounded-full bg-gray-100 inline-block p-1 outline-1">
@@ -167,7 +167,7 @@
                 <h3>Family fun</h3>
             </div>
         </div>
-    <div class="flex w-full gap-2 items-stretch"> 
+    <div class="flex flex-col md:flex md:flex-row md:w-full md:gap-2 md:items-stretch"> 
         <div class="flex flex-col border rounded-lg shadow-lg p-2 my-4 w-96 h-auto">
             <div class="flex gap-1">
                 <i class="fa-solid fa-star size-4 text-green-700"></i> . Jeffrey . Jan 2026
@@ -321,7 +321,7 @@
 <!-- TRAVELER PHOTOS -->
 
     <h3 class="text-2xl font-bold">Traveler Photos</h3>
-    <div class="grid grid-cols-2 gap-4 my-4">
+    <div class="grid grid-rows-1 gap-2 my-4 md:grid-cols-2 md:gap-4 md:my-4">
         <img src="images/gallery-3.jpg" alt="" class="h-96 w-full object-cover rounded">
 
         <div class="grid grid-cols-2 grid-rows-2 gap-2 h-96"> 
@@ -440,7 +440,7 @@
 </div>
 <!-- PRICING WIDGET -->
 
-    <div class="w-3/12 h-full border rounded-xl border-gray-400 flex flex-col text items-start justify-center my-20 p-8 gap-4 shadow-sm sticky top-8">
+    <div class="sm:w-3/12 h-full border rounded-xl border-gray-400 flex flex-col text items-start justify-center my-20 p-8 gap-4 shadow-sm sticky top-8">
     
     <div class="flex-1 bg-red-50 text-red-600 text-xs font-medium px-2 py-1 rounded flex items-center gap-1 mb-2">
         <span>🕒</span> Ends January 27
