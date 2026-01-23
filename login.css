@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+/* Center card */
+.center-area {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  font-family: Merriweather, serif;
+  font-size: 26px;
+  margin: 10px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  border: 2px solid #e6e6e6;
+  font-size: 16px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #0a8f6f;
+}
+
+/* Button */
+.btn.login {
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  background: #0a8f6f;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* OR line */
+.or-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  color: #aaa;
+}
+
+.or-line::before,
+.or-line::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+/* Social buttons */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social {
+  width: 80px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Terms */
+.terms {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.terms a {
+  color: black;
+}
