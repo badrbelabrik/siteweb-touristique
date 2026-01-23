@@ -1,9 +1,11 @@
-Digital Tourism Platform
+Digital Tourism Platform:
+
 This project is a responsive web application inspired by Viator, 
 designed to provide a seamless user experience for discovering 
 destinations and booking travel activities.
 
-Project Overview
+Project Overview:
+
 This project involves the integration of key pages for a digital tourism agency,
 focusing on modern UI/UX design and accessible frontend development.
 
