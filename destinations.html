@@ -1,86 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinations</title>
-    <link rel="stylesheet" href="destinations.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
-<body>
-    <!-- HEADER         -->
-    <header class="relative flex items-center justify-between px-4 md:px-8 py-3 bg-white border-b border-gray-200"> 
+
+<body class="bg-gray-50">
+
+    <!-- HEADER -->
+    <header class="relative flex items-center justify-between px-4 md:px-8 py-3 bg-white border-b border-gray-200">
         <div class="flex flex-1 items-center md:hidden">
             <button aria-label="Open navigation menu" class="p-2 hover:bg-gray-100 rounded-lg cursor-pointer">
-            <i class="fa-solid fa-bars text-xl"></i>
+                <i class="fa-solid fa-bars text-xl"></i>
             </button>
         </div>
 
-        <div class="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:flex-none flex items-center space-x-2">
-            <img src="images/Viator_logo.png" alt="Viator" class="h-5 md:h-8">
+        <div
+            class="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:flex-none flex items-center space-x-2">
+            <img src="Viator_Logo.jpg" alt="Viator" class="h-5 md:h-8">
             <button class="hidden md:block text-sm font-medium hover:text-green-700 whitespace-nowrap cursor-pointer">
                 Discover &gt;
             </button>
         </div>
+        <div class="hidden sm:flex items-center border rounded-full mx-8 px-4 py-2 w-full max-w-md">
+            <span class="text-gray-400 mr-2"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" placeholder="search your direction" class="w-full outline-none text-sm" />
+        </div>
 
-  <div class="flex flex-1 items-center justify-end space-x-2 md:space-x-5">
-    <button aria-label="worldwide" class="hidden md:block hover:bg-gray-100 rounded-full"><i class="fa-solid fa-earth-africa"></i></button>
-    <button aria-label="rewards" class="hidden md:block hover:bg-gray-100 rounded-full"><i class="fa-solid fa-gift"></i></button>
-    
-    <button aria-label="user-profile" class="flex items-center space-x-2 border border-gray-300 rounded-full px-4 py-2 hover:shadow-md cursor-pointer">
-      <span class="text-lg"><i class="fa-solid fa-user"></i></span>
-    </button>
-  </div>
-</header>
+        <div class="flex flex-1 items-center justify-end space-x-2 md:space-x-5">
+            <button aria-label="phone" class="hidden md:block hover:bg-gray-100 rounded-full"><i
+                    class="fa-solid fa-phone"></i></button>
+            <button aria-label="worldwide" class="hidden md:block hover:bg-gray-100 rounded-full"><i
+                    class="fa-solid fa-earth-africa"></i></button>
+            <button aria-label="rewards" class="hidden md:block hover:bg-gray-100 rounded-full"><i
+                    class="fa-solid fa-gift"></i></button>
+
+            <button aria-label="user-profile"
+                class="flex items-center space-x-2 border border-gray-300 rounded-full px-4 py-2 hover:shadow-md cursor-pointer">
+                <span class="text-lg"><i class="fa-solid fa-user"></i></span>
+            </button>
+        </div>
+    </header>
+    <!-- BREADCRUMB -->
+    <div class="max-w-7xl mx-auto px-4 py-3 text-sm text-gray-500">
+        Home / Things to do in france / Things to do in ile-de-france / Things to do in paris / <span
+            class="text-black">Paris Tours</span>
+    </div>
+
+    <!-- TITLE -->
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-6">
+            All Paris Tours & Excursions in 2026
+        </h2>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-wrap gap-3 pb-4">
+
+            <button class="border rounded-full px-4 py-2 text-sm flex items-center gap-2">
+                <i class="fa-solid fa-calendar"></i> select date
+            </button>
+
+            <button class="border rounded-full px-4 py-2 text-sm">
+                2 Adults <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <button class="border rounded-full px-4 py-2 text-sm flex items-center gap-2">
+                <i class="fa-solid fa-sliders"></i>Filters
+            </button>
+
+            <button class="border rounded-full px-4 py-2 text-sm">
+                Cruises & sailing
+            </button>
+
+            <button class="border rounded-full px-4 py-2 text-sm">
+                dinner cruises
+            </button>
+
+            <button class="border rounded-full px-4 py-2 text-sm">
+                Day Trips
+            </button>
+
+            <button class="border rounded-full px-4 py-2 text-sm">
+                private sightseeing tours
+            </button>
+
+            <button class="border rounded-full px-4 py-2 text-sm">
+                Half-day Tours
+            </button>
+
+        </div>
+    </div>
+
+    <!-- RESULT COUNT -->
+    <div class="max-w-7xl mx-auto px-4 text-sm text-gray-600 mt-2">
+        <span class="font-semibold">1,000+</span> results
+        <span class="text-gray-400 ml-2">Auto-translated</span>
+    </div>
+
+
+    <!-- CARDS GRID -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+            <div class="relative">
+                <img src="caption (11).jpg" class="h-44 w-full object-cover">
+                <span
+                    class="absolute top-3 right-3 bg-white rounded-full p-2 cursor-pointer hover:text-red-500">♡</span>
+            </div>
+            <div class="p-4">
+                <!-- Rating -->
+                <div class="flex items-center gap-1 mt-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-regular fa-star text-yellow-400"></i>
+                    <span class="text-xs text-gray-500 ml-1">(4.0)</span>
+                </div>
+                <h3 class="text-sm font-semibold">Versailles Palace Guided Tour</h3>
+                <p class="text-green-600 text-sm mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-check"></i> Free cancellation
+                </p>
+                <p class="text-xs text-gray-500 mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-clock"></i> 2 hours
+                </p>
+                <p class="font-bold mt-2">from $113</p>
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+            <div class="relative">
+                <img src="caption (9).jpg" class="h-44 w-full object-cover">
+                <span
+                    class="absolute top-3 right-3 bg-white rounded-full p-2 cursor-pointer hover:text-red-500">♡</span>
+            </div>
+            <div class="p-4">
+                <!-- Rating -->
+                <div class="flex items-center gap-1 mt-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-regular fa-star text-yellow-400"></i>
+                    <span class="text-xs text-gray-500 ml-1">(4.0)</span>
+                </div>
+                <h3 class="text-sm font-semibold">Louvre Museum Skip-the-Line</h3>
+                <p class="text-green-600 text-sm mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-check"></i> Free cancellation
+                </p>
+                <p class="text-xs text-gray-500 mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-clock"></i> 2h 15min
+                </p>
+                <p class="font-bold mt-2">from $85</p>
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+            <div class="relative">
+                <img src="caption (7).jpg" class="h-44 w-full object-cover">
+                <span
+                    class="absolute top-3 right-3 bg-white rounded-full p-2 cursor-pointer hover:text-red-500">♡</span>
+            </div>
+            <div class="p-4">
+                <!-- Rating -->
+                <div class="flex items-center gap-1 mt-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-regular fa-star text-yellow-400"></i>
+                    <span class="text-xs text-gray-500 ml-1">(4.0)</span>
+                </div>
+                <h3 class="text-sm font-semibold">Eiffel Tower Summit Access</h3>
+                <p class="text-green-600 text-sm mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-check"></i> Free cancellation
+                </p>
+                <p class="text-xs text-gray-500 mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-clock"></i> 2h 30min
+                </p>
+                <p class="font-bold mt-2">from $111</p>
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+            <div class="relative">
+                <img src="caption (6).jpg" class="h-44 w-full object-cover">
+                <span
+                    class="absolute top-3 right-3 bg-white rounded-full p-2 cursor-pointer hover:text-red-500">♡</span>
+            </div>
+            <div class="p-4">
+                <!-- Rating -->
+                <div class="flex items-center gap-1 mt-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-regular fa-star text-yellow-400"></i>
+                    <span class="text-xs text-gray-500 ml-1">(4.0)</span>
+                </div>
+                <h3 class="text-sm font-semibold">Seine River Dinner Cruise</h3>
+                <p class="text-green-600 text-sm mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-check"></i> Free cancellation
+                </p>
+                <p class="text-xs text-gray-500 mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-clock"></i> 3 hours
+                </p>
+                <p class="font-bold mt-2">from $120</p>
+            </div>
+        </div>
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+            <div class="relative">
+                <img src="caption (10).jpg" class="h-44 w-full object-cover">
+                <span
+                    class="absolute top-3 right-3 bg-white rounded-full p-2 cursor-pointer hover:text-red-500">♡</span>
+            </div>
+            <div class="p-4">
+                <!-- Rating -->
+                <div class="flex items-center gap-1 mt-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-regular fa-star text-yellow-400"></i>
+                    <span class="text-xs text-gray-500 ml-1">(4.0)</span>
+                </div>
+                <h3 class="text-sm font-semibold">Seine River Dinner Cruise</h3>
+                <p class="text-green-600 text-sm mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-check"></i> Free cancellation
+                </p>
+                <p class="text-xs text-gray-500 mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-clock"></i> 3 hours
+                </p>
+                <p class="font-bold mt-2">from $120</p>
+            </div>
+        </div>
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+            <div class="relative">
+                <img src="caption (4).jpg" class="h-44 w-full object-cover">
+                <span
+                    class="absolute top-3 right-3 bg-white rounded-full p-2 cursor-pointer hover:text-red-500">♡</span>
+            </div>
+            <div class="p-4">
+                <!-- Rating -->
+                <div class="flex items-center gap-1 mt-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-regular fa-star text-yellow-400"></i>
+                    <span class="text-xs text-gray-500 ml-1">(4.0)</span>
+                </div>
+                <h3 class="text-sm font-semibold">Seine River Dinner Cruise</h3>
+                <p class="text-green-600 text-sm mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-check"></i> Free cancellation
+                </p>
+                <p class="text-xs text-gray-500 mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-clock"></i> 3 hours
+                </p>
+                <p class="font-bold mt-2">from $120</p>
+            </div>
+        </div>
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+            <div class="relative">
+                <img src="caption (5).jpg" class="h-44 w-full object-cover">
+                <span
+                    class="absolute top-3 right-3 bg-white rounded-full p-2 cursor-pointer hover:text-red-500">♡</span>
+            </div>
+            <div class="p-4">
+                <!-- Rating -->
+                <div class="flex items-center gap-1 mt-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-regular fa-star text-yellow-400"></i>
+                    <span class="text-xs text-gray-500 ml-1">(4.0)</span>
+                </div>
+                <h3 class="text-sm font-semibold">Seine River Dinner Cruise</h3>
+                <p class="text-green-600 text-sm mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-check"></i> Free cancellation
+                </p>
+                <p class="text-xs text-gray-500 mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-clock"></i> 3 hours
+                </p>
+                <p class="font-bold mt-2">from $120</p>
+            </div>
+        </div>
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+            <div class="relative">
+                <img src="caption (8).jpg" class="h-44 w-full object-cover">
+                <span
+                    class="absolute top-3 right-3 bg-white rounded-full p-2 cursor-pointer hover:text-red-500">♡</span>
+            </div>
+            <div class="p-4">
+                <!-- Rating -->
+                <div class="flex items-center gap-1 mt-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-regular fa-star text-yellow-400"></i>
+                    <span class="text-xs text-gray-500 ml-1">(4.0)</span>
+                </div>
+                <h3 class="text-sm font-semibold">Seine River Dinner Cruise</h3>
+                <p class="text-green-600 text-sm mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-check"></i> Free cancellation
+                </p>
+                <p class="text-xs text-gray-500 mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-clock"></i> 3 hours
+                </p>
+                <p class="font-bold mt-2">from $120</p>
+            </div>
+        </div>
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+            <div class="relative">
+                <img src="caption.jpg" class="h-44 w-full object-cover">
+                <span
+                    class="absolute top-3 right-3 bg-white rounded-full p-2 cursor-pointer hover:text-red-500">♡</span>
+            </div>
+            <div class="p-4">
+                <!-- Rating -->
+                <div class="flex items-center gap-1 mt-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-regular fa-star text-yellow-400"></i>
+                    <span class="text-xs text-gray-500 ml-1">(4.0)</span>
+                </div>
+                <h3 class="text-sm font-semibold">Seine River Dinner Cruise</h3>
+                <p class="text-green-600 text-sm mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-check"></i> Free cancellation
+                </p>
+                <p class="text-xs text-gray-500 mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-clock"></i> 3 hours
+                </p>
+                <p class="font-bold mt-2">from $120</p>
+            </div>
+        </div>
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+            <div class="relative">
+                <img src="caption (3).jpg" class="h-44 w-full object-cover">
+                <span
+                    class="absolute top-3 right-3 bg-white rounded-full p-2 cursor-pointer hover:text-red-500">♡</span>
+            </div>
+            <div class="p-4">
+                <!-- Rating -->
+                <div class="flex items-center gap-1 mt-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-regular fa-star text-yellow-400"></i>
+                    <span class="text-xs text-gray-500 ml-1">(4.0)</span>
+                </div>
+                <h3 class="text-sm font-semibold">Seine River Dinner Cruise</h3>
+                <p class="text-green-600 text-sm mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-check"></i> Free cancellation
+                </p>
+                <p class="text-xs text-gray-500 mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-clock"></i> 3 hours
+                </p>
+                <p class="font-bold mt-2">from $120</p>
+            </div>
+        </div>
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+            <div class="relative">
+                <img src="caption (2).jpg" class="h-44 w-full object-cover">
+                <span
+                    class="absolute top-3 right-3 bg-white rounded-full p-2 cursor-pointer hover:text-red-500">♡</span>
+            </div>
+            <div class="p-4">
+                <!-- Rating -->
+                <div class="flex items-center gap-1 mt-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-regular fa-star text-yellow-400"></i>
+                    <span class="text-xs text-gray-500 ml-1">(4.0)</span>
+                </div>
+                <h3 class="text-sm font-semibold">Seine River Dinner Cruise</h3>
+                <p class="text-green-600 text-sm mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-check"></i> Free cancellation
+                </p>
+                <p class="text-xs text-gray-500 mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-clock"></i> 3 hours
+                </p>
+                <p class="font-bold mt-2">from $120</p>
+            </div>
+        </div>
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+            <div class="relative">
+                <img src="caption (1).jpg" class="h-44 w-full object-cover">
+                <span
+                    class="absolute top-3 right-3 bg-white rounded-full p-2 cursor-pointer hover:text-red-500">♡</span>
+            </div>
+            <div class="p-4">
+                <!-- Rating -->
+                <div class="flex items-center gap-1 mt-1">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <i class="fa-regular fa-star text-yellow-400"></i>
+                    <span class="text-xs text-gray-500 ml-1">(4.0)</span>
+                </div>
+                <h3 class="text-sm font-semibold">Seine River Dinner Cruise</h3>
+                <p class="text-green-600 text-sm mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-check"></i> Free cancellation
+                </p>
+                <p class="text-xs text-gray-500 mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-clock"></i> 3 hours
+                </p>
+                <p class="font-bold mt-2">from $120</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="w-full flex justify-center py-6">
+        <div class="flex justify-center space-x-3 text-gray-700 text-sm font-medium">
+
+
+            <!-- Page Numbers -->
+            <button class="w-8 h-8 flex items-center justify-center rounded-full text-white bg-[#003327]"
+                aria-current="page">1</button>
+            <button
+                class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-[#003327] text-[#003327] hover:bg-[#003327] hover:text-white">2</button>
+            <button
+                class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-[#003327] text-[#003327] hover:bg-[#003327] hover:text-white">3</button>
+            <button
+                class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-[#003327] text-[#003327] hover:bg-[#003327] hover:text-white">....</button>
+
+            <button
+                class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-[#003327] text-[#003327] hover:bg-[#003327] hover:text-white">12</button>
+
+        </div>
+
+    </div>
+    <div class="flex items-center justify-end space-x-4 text-[#003327] text-sm font-medium py-3 px-7">
+
+        <!-- Page indicator text -->
+        <span>1/4</span>
+
+        <!-- Previous button -->
+        <button
+            class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-[#003327] text-[#003327] hover:bg-[#003327] hover:text-white transition">
+            &lt;
+        </button>
+
+        <!-- Next button -->
+        <button
+            class="w-8 h-8 flex items-center justify-center rounded-full border-2 border-[#003327] text-[#003327] hover:bg-[#003327] hover:text-white transition">
+            &gt;
+        </button>
+
+    </div>
+
+
+
+
+
+
+    </div>
 </body>
 
-<!-- Footer -->
-    <footer class="w-full bg-black py-12">
-     <div class="flex flex-col max-w-5xl mx-auto px-8  items-center gap-11">
-        <div class="flex gap-4 mt-4">
-            <i class="fa-brands fa-facebook-f text-xl text-white cursor-pointer"></i>
-            <i class="fa-brands fa-x-twitter text-xl text-white cursor-pointer"></i>
-            <i class="fa-brands fa-pinterest-p text-xl text-white cursor-pointer"></i>
-            <i class="fa-brands fa-instagram text-xl text-white cursor-pointer"></i>
-            <i class="fa-brands fa-youtube text-xl text-white cursor-pointer"></i>
-            <i class="fa-brands fa-tiktok text-xl text-white cursor-pointer"></i>
-        </div>
-        <div class="flex text-white">
-            <img src="images/star.png" alt="">
-            <img src="images/star.png" alt="">
-            <img src="images/star.png" alt="">
-            <img src="images/star.png" alt="">
-            <img src="images/star2.png" alt="">
-            <h3 class="ml-2">4.4 rating | 298,840 reviews</h3>
-            <i class="fa-solid fa-star mt-1 ml-1 text-green-400"></i><span class="text-white font-bold ml-1">Trustpilot</span>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-7 text-white">
-            <h3>Help Center</h3>
-            <h3>Careers</h3>
-            <h3>Travel Agents</h3>
-            <h3>Viator blog</h3>
-            <h3>Privacy and Cookies Statement</h3>
-            <h3>Sitemap</h3>
-            <h3>Become an Affiliate</h3>
-            <h3>Accessibility</h3>
-            <h3>About Viator</h3>
-            <h3>Supplier Sign Up</h3>
-            <h3>News</h3>
-        </div>
-        <div class="border-t border-gray-800 w-full my-1"></div>
-        <div class="flex flex-col md:flex-row gap-4 justify-between items-center w-full">
-            <div class="flex gap-1">
-                <img src="images/playstore.png" alt="" class="w-36 h-10">
-                <img src="images/appstore.png" alt="" class="w-36 h-10">
-            </div>
-            <div class="flex text-white tex-sm gap-2">
-                <h3 class="text-sm cursor-pointer">© 1997-2026 Viator, Inc.</h3>
-                <h3 class="text-sm cursor-pointer">Terms & Conditions</h3>
-                <h3 class="text-sm cursor-pointer">How Viator works</h3>
-                <h3 class="text-sm cursor-pointer">Cookie Consent</h3>
-            </div>
-        </div>
-     </div>   
-    </footer>
 </html>
