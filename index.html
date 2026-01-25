@@ -3,39 +3,442 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viator travel tours</title>
+    <title>Viator landing page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <!-- HEADER         -->
-    <header class="relative flex items-center justify-between px-4 md:px-8 py-3 bg-white border-b border-gray-200"> 
-        <div class="flex flex-1 items-center md:hidden">
-            <button aria-label="Open navigation menu" class="p-2 hover:bg-gray-100 rounded-lg cursor-pointer">
-            <i class="fa-solid fa-bars text-xl"></i>
-            </button>
-        </div>
 
-        <div class="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:flex-none flex items-center space-x-2">
-            <img src="images/Viator_logo.png" alt="Viator" class="h-5 md:h-8">
-            <button class="hidden md:block text-sm font-medium hover:text-green-700 whitespace-nowrap cursor-pointer">
-                Discover &gt;
-            </button>
-        </div>
+<body>
+    <main>
+<!-- HEADER         -->
+<header class="relative flex items-center justify-between px-4 md:px-8 py-3 bg-white border-b border-gray-200">
+  <!-- Mobile Hamburger -->
+  <div class="flex items-center md:hidden">
+    <button aria-label="Open navigation menu" class="p-2 hover:bg-gray-100 rounded-lg cursor-pointer" id="mobile-menu-button">
+      <i class="fa-solid fa-bars text-xl"></i>
+    </button>
+  </div>
+
+  <!-- Logo -->
+  <div class="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex items-center space-x-2">
+    <img src="images/Viator_logo.png" alt="Viator" class="h-5 md:h-8">
+    <button class="hidden md:block text-sm font-medium hover:text-green-700 whitespace-nowrap cursor-pointer">
+      Discover &gt;
+    </button>
+  </div>
+
+  <!-- Navigation Links (Desktop) -->
+  <nav class="hidden md:flex items-center space-x-6">
+    <a href="destinations.html" class="text-gray-700 hover:text-green-700 font-medium">Destinations</a>
+    <a href="activites.html" class="text-gray-700 hover:text-green-700 font-medium">Activities</a>
+  </nav>
+
+  <!-- Search & Profile -->
+  <div class="hidden md:flex items-center border rounded-full mx-8 px-4 py-2 w-full max-w-md">
+    <span class="text-gray-400 mr-2"><i class="fa-solid fa-magnifying-glass"></i></span>
+    <input type="text" placeholder="Search your direction" class="w-full outline-none text-sm">
+  </div>
 
   <div class="flex flex-1 items-center justify-end space-x-2 md:space-x-5">
-    <button aria-label="worldwide" class="hidden md:block hover:bg-gray-100 rounded-full"><i class="fa-solid fa-earth-africa"></i></button>
-    <button aria-label="rewards" class="hidden md:block hover:bg-gray-100 rounded-full"><i class="fa-solid fa-gift"></i></button>
-    
+    <button aria-label="worldwide" class="hidden md:block hover:bg-gray-100 rounded-full">
+      <i class="fa-solid fa-earth-africa"></i>
+    </button>
+    <button aria-label="rewards" class="hidden md:block hover:bg-gray-100 rounded-full">
+      <i class="fa-solid fa-gift"></i>
+    </button>
     <a href="login.html" aria-label="user-profile" class="flex items-center space-x-2 border border-gray-300 rounded-full px-4 py-2 hover:shadow-md cursor-pointer">
       <span class="text-lg"><i class="fa-solid fa-user"></i></span>
     </a>
   </div>
-</header>
-</body>
 
-<!-- Footer -->
+  <!-- Mobile Menu (hidden by default) -->
+  <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white border-t border-gray-200 shadow-md hidden md:hidden">
+    <a href="destinations.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Destinations</a>
+    <a href="activites.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Activities</a>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+<!-- SEARCH SLIDER -->
+<section class="relative h-[300px] md:h-[400px] w-full flex items-center justify-center bg-cover bg-center bg-[url('images/hero-img.jpg')]">
+
+    
+    
+    <div class="text-center text-white w-full max-w-3xl px-4">
+        <h1 class="font-bold text-3xl md:text-5xl mb-4">Do more with viator</h1>
+        <p class="mb-8 text-xl">Plan better with 300,000+ travel experiences.</p>
+        
+        <div class="flex flex-col md:flex-row items-center w-full h-[75px] bg-white border-2 rounded-full shadow-2xl overflow-hidden">
+            
+            <div class="hidden md:flex flex-1 flex-col items-start justify-center rounded-full px-8 h-full hover:bg-gray-100 transition cursor-pointer">
+                <span class="text-xs font-bold text-black">Where to?</span>
+                <input type="text" placeholder="Search for a place" class="text-sm text-gray-500 bg-transparent outline-none w-full">
+            </div>
+
+            <div class="h-8 w-[1px] bg-gray-300 hidden md:block"></div>
+
+            <div class="hidden md:flex flex-1 flex-col items-start justify-center rounded-full px-8 h-full hover:bg-gray-100 transition cursor-pointer">
+                <span class="text-xs font-bold text-black">When</span>
+                <p class="text-sm text-gray-500 text-left">Select Dates</p>
+            </div>
+
+            <div class="pr-3">
+                <button aria-label="search" class="hidden md:flex bg-[#008768] hover:bg-green-800 text-white w-12 h-12 items-center justify-center rounded-full transition cursor-pointer">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="md:hidden sm:flex flex-col items-start justify-center rounded-full h-full w-full hover:bg-gray-100 transition cursor-pointer">
+                <input type="text" placeholder="Search for a place or activity" class="text-sm text-gray-500 bg-transparent outline-none w-full text-center">
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- WHY BOOK WITH VIATOR -->
+    <div class="banner-container flex flex-col m-8">
+        <div>
+            <h2 class="text-center font-bold text-black text-2xl">Why book with Viator?</h2>
+        </div>
+        <div class="grid grid-cols-1 m-8 md:flex justify-evenly gap-3 w-full">
+            <div class="flex-1 flex flex-col text-center items-center">
+                <img src="images/icon1.png" alt="Support" class="w-20 h-16 object-contain mb-4">
+                <h3 class="font-bold">24/7 customer support</h3>
+                <p>No matter the time zone, we’re here to help.</p>
+            </div>
+            <div class="flex-1 flex flex-col text-center items-center">
+                <img src="images/icon2.png" alt="Support" class="w-20 h-16 object-contain mb-4">
+                <h3 class="font-bold">Earn rewards</h3>
+                <p>Explore, earn, redeem, and repeat with our loyalty program.</p>
+            </div>
+            <div class="flex-1 flex flex-col text-center items-center">
+                <img src="images/icon3.png" alt="Support" class="w-20 h-16 object-contain mb-4">
+                <h3 class="font-bold">Millions of reviews</h3>
+                <p>Plan and book with confidence using reviews from fellow travelers.</p>
+            </div>
+            <div class="flex-1 flex flex-col text-center items-center">
+                <img src="images/icon4.png" alt="Support" class="w-20 h-16 object-contain mb-4">
+                <h3 class="font-bold">Plan your way</h3>
+                <p>Stay flexible with free cancellation and the option to reserve now and pay later at no additional cost.</p>
+            </div>
+
+        </div>
+        <div class="w-full px-4 py-10 flex justify-center">
+            <div class="flex flex-col relative h-[200px] max-w-4xl w-full rounded-lg items-center justify-center bg-cover bg-center bg-[#F7EEFF]">
+            <h2 class="text-center font-bold text-2xl">Log in to manage bookings & Viator Rewards</h2>
+            <p>Don't have an account yet? Sign up</p>
+            <div class="h-[40px] w-64 mt-4 rounded-lg bg-cover bg-center bg-black text-white text-center">
+                <h3 class="mt-1">Log in</h3>
+            </div>
+            </div>
+        </div>    
+    </div>
+<!-- TOP DESTINATIONS -->
+    <div class="destinations flex flex-col m-8">
+        <h3 class="text-center font-bold text-black text-2xl mb-8">Top Destinations</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div class="relative h-40 rounded-xl bg-[url('/images/LasVegas.png')] bg-cover bg-center brightness-75 cursor-pointer transition hover:brightness-100 shadow-md flex items-center justify-center">
+                <h3 class="text-center text-white font-bold">Las Vegas</h3>
+            </div>
+            <div class="relative h-40 rounded-xl bg-[url('/images/Rome.png')] bg-cover bg-center brightness-75 cursor-pointer transition hover:brightness-100 shadow-md flex items-center justify-center">
+                <h3 class="text-center text-white font-bold">Rome</h3>
+            </div>
+            <div class="relative h-40 rounded-xl bg-[url('/images/Paris.png')] bg-cover bg-center brightness-75 cursor-pointer transition hover:brightness-100 shadow-md flex items-center justify-center">
+                <h3 class="text-center text-white font-bold">Paris</h3>
+            </div>
+            <div class="relative h-40 rounded-xl bg-[url('/images/London.png')] bg-cover bg-center brightness-75 cursor-pointer transition hover:brightness-100 shadow-md flex items-center justify-center">
+                <h3 class="text-center text-white font-bold">London</h3>
+            </div>
+            <div class="relative h-40 rounded-xl bg-[url('/images/NewYorkCity.png')] bg-cover bg-center brightness-75 cursor-pointer transition hover:brightness-100 shadow-md flex items-center justify-center">
+                <h3 class="text-center text-white font-bold">New York City</h3>
+            </div>
+            <div class="relative h-40 rounded-xl bg-[url('/images/Washington.png')] bg-cover bg-center brightness-75 cursor-pointer transition hover:brightness-100 shadow-md flex items-center justify-center">
+                <h3 class="text-center text-white font-bold">Washington DC</h3>
+            </div>
+            <div class="relative h-40 rounded-xl bg-[url('/images/Cancun.png')] bg-cover bg-center brightness-75 cursor-pointer transition hover:brightness-100 shadow-md flex items-center justify-center">
+                <h3 class="text-center text-white font-bold">Cancun</h3>
+            </div>
+                        <div class="relative h-40 rounded-xl bg-[url('/images/Florence.png')] bg-cover bg-center brightness-75 cursor-pointer transition hover:brightness-100 shadow-md flex items-center justify-center">
+                <h3 class="text-center text-white font-bold">Florence</h3>
+            </div>
+                        <div class="relative h-40 rounded-xl bg-[url('/images/Barcelona.png')] bg-cover bg-center brightness-75 cursor-pointer transition hover:brightness-100 shadow-md flex items-center justify-center">
+                <h3 class="text-center text-white font-bold">Barcelona</h3>
+            </div>
+                        <div class="relative h-40 rounded-xl bg-[url('/images/Oahu.png')] bg-cover bg-center brightness-75 cursor-pointer transition hover:brightness-100 shadow-md flex items-center justify-center">
+                <h3 class="text-center text-white font-bold">Oahu</h3>
+            </div>
+        </div>
+    </div>
+        <div class="w-full px-4 py-10 flex justify-center">
+            <div class="flex flex-col relative h-[200px] w-full rounded-lg items-center justify-center bg-cover bg-center bg-[#EBFAF7]">
+            <h2 class="text-center font-bold text-2xl">Keep things flexible</h2>
+            <p>Use Reserve Now & Pay Later to secure the activities you don't want to miss without being locked in.</p>
+            </div>
+        </div>   
+<!-- TOP ATTRACTIONS -->
+<div class="destinations flex flex-col m-8">
+    <h2 class="text-center font-bold text-black text-2xl mb-8">Top Attractions</h2>
+    
+    <div class="flex flex-col md:flex-row w-full gap-6">
+        
+        <div class="flex flex-col gap-6 flex-1">
+            <div class="flex flex-row items-center gap-6">
+                <img src="images/colosseum.jpg" alt="Colosseum" class="size-24 rounded-2xl object-cover">
+                <div class="flex flex-col">
+                    <h3 class="font-bold">Colosseum</h3>
+                    <p>1,911 tours and activities</p>
+                </div>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+                <img src="images/yellowstone.jpg" alt="Yellowstone" class="size-24 rounded-2xl object-cover">
+                <div class="flex flex-col">
+                    <h3 class="font-bold">YellowStone National Park</h3>
+                    <p>119 tours and activities</p>
+                </div>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+                <img src="images/eiffel.jpg" alt="Eiffel Tower" class="size-24 rounded-2xl object-cover">
+                <div class="flex flex-col">
+                    <h3 class="font-bold">Eiffel Tower</h3>
+                    <p>2,540 tours and activities</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-6 flex-1">
+            <div class="flex flex-row items-center gap-6">
+                <img src="images/colosseum.jpg" alt="Colosseum" class="size-24 rounded-2xl object-cover">
+                <div class="flex flex-col">
+                    <h3 class="font-bold">Colosseum</h3>
+                    <p>1,911 tours and activities</p>
+                </div>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+                <img src="images/yellowstone.jpg" alt="Yellowstone" class="size-24 rounded-2xl object-cover">
+                <div class="flex flex-col">
+                    <h3 class="font-bold">YellowStone National Park</h3>
+                    <p>119 tours and activities</p>
+                </div>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+                <img src="images/eiffel.jpg" alt="Eiffel Tower" class="size-24 rounded-2xl object-cover">
+                <div class="flex flex-col">
+                    <h3 class="font-bold">Eiffel Tower</h3>
+                    <p>2,540 tours and activities</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-6 flex-1">
+            <div class="flex flex-row items-center gap-6">
+                <img src="images/colosseum.jpg" alt="Colosseum" class="size-24 rounded-2xl object-cover">
+                <div class="flex flex-col">
+                    <h3 class="font-bold">Colosseum</h3>
+                    <p>1,911 tours and activities</p>
+                </div>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+                <img src="images/yellowstone.jpg" alt="Yellowstone" class="size-24 rounded-2xl object-cover">
+                <div class="flex flex-col">
+                    <h3 class="font-bold">YellowStone National Park</h3>
+                    <p>119 tours and activities</p>
+                </div>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+                <img src="images/eiffel.jpg" alt="Eiffel Tower" class="size-24 rounded-2xl object-cover">
+                <div class="flex flex-col">
+                    <h3 class="font-bold">Eiffel Tower</h3>
+                    <p>2,540 tours and activities</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+<!-- TOP TOURS -->
+        <div class="top-tours flex flex-col m-8">
+        <h3 class="text-center font-bold text-black text-2xl mb-8">Top Tours</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="flex flex-col cursor-pointer">
+                    <img src="images/cancun-river.jpg" alt="" class="rounded-xl hover:shadow-2xl">
+                    <p><i class="fa-solid fa-globe"></i> Cancun, Riviera Maya & the yucatan</p>
+                    <p><i class="fa-solid fa-star"></i> 4.5 (134)</p>
+                    <h3 class="font-bold">Chichen itza premier tour with cenote xunaan, valladolid & lunch</h3>
+                    <h3>from 74$</h3>
+                </div>
+
+                <div class="flex flex-col cursor-pointer">
+                    <img src="images/rome.jpg" alt="" class="rounded hover:shadow-2xl">
+                    <p><i class="fa-solid fa-globe"></i> Rome, italy</p>
+                    <p><i class="fa-solid fa-star"></i> 4.5 (38,990)</p>
+                    <h3 class="font-bold">Vatican Museums, sistine chapel & 
+                        st peter's basilica guided tour</h3>
+                    <h3>from 23$</h3>
+                </div>
+
+                <div class="flex flex-col cursor-pointer">
+                    <img src="images/newyork.jpg" alt="" class="rounded hover:shadow-2xl">
+                    <p><i class="fa-solid fa-globe"></i> New York City, New York</p>
+                    <p><i class="fa-solid fa-star"></i> 4.5 (5,358)</p>
+                    <h3 class="font-bold">Summit One Vanderbilt Experience Ticket</h3>
+                    <h3>from 48$</h3>
+                </div>
+
+                <div class="flex flex-col cursor-pointer">
+                    <img src="images/tokyo.jpg" alt="" class="rounded hover:shadow-2xl">
+                    <p><i class="fa-solid fa-globe"></i> Tokyo, Kanto</p>
+                    <p><i class="fa-solid fa-star"></i> 4.8 (26,178)</p>
+                    <h3 class="font-bold">Mt Fuji and Hakone 1-Day Bus Tour Return by Bullet Train</h3>
+                    <h3>from 159$</h3>
+                </div>
+        </div>
+
+    <div class="w-full px-4 py-10 flex justify-center">
+        <div class="flex flex-col relative h-[200px] w-full rounded-lg items-center justify-center bg-cover bg-center bg-[#EBFAF7]">
+            <h2 class="text-center font-bold text-2xl">Free cancellation</h2>
+            <p>You'll receive a full refund if you cancel at least 24 hours in advance of most experiences.</p>
+        </div>
+    </div>    
+    </div>  
+<!-- WARM DESTINATIONS -->
+    <div class="warm-destinations flex flex-col m-8 relative group">
+    <h2 class="font-bold text-black text-2xl mb-8 text-center">Warm Destinations</h2>
+    
+    <div id="dest-slider" class="flex flex-row gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth pb-4">
+        
+        <div class="min-w-[150px] snap-start group/card cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg aspect-[3/4]">
+                <img src="images/warm-rio.png" 
+                     alt="Rio de Janeiro" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                
+                <div class="absolute bottom-4 left-4 text-white">
+                    <h3 class="font-bold text-lg leading-tight">Rio de Janeiro</h3>
+                    <p class="text-xs opacity-90">1,535 Tours</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="min-w-[150px] snap-start group/card cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg aspect-[3/4]">
+                <img src="images/warm-bali.png" 
+                     alt="Bali" class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="absolute bottom-4 left-4 text-white">
+                    <h3 class="font-bold text-lg">Bali</h3>
+                    <p class="text-xs">6,856 Tours</p>
+                </div>
+            </div>
+        </div>
+
+                <div class="min-w-[150px] snap-start group/card cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg aspect-[3/4]">
+                <img src="images/warm-cancun.png" 
+                     alt="Rio de Janeiro" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                
+                <div class="absolute bottom-4 left-4 text-white">
+                    <h3 class="font-bold text-lg leading-tight">Cancun</h3>
+                    <p class="text-xs opacity-90">6,856 Tours</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="min-w-[150px] snap-start group/card cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg aspect-[3/4]">
+                <img src="images/warm-miami.png" 
+                     alt="Bali" class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="absolute bottom-4 left-4 text-white">
+                    <h3 class="font-bold text-lg">Miami</h3>
+                    <p class="text-xs">1,097 Tours</p>
+                </div>
+            </div>
+        </div>
+
+                <div class="min-w-[150px] snap-start group/card cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg aspect-[3/4]">
+                <img src="images/warm-siemreap.png" 
+                     alt="Rio de Janeiro" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                
+                <div class="absolute bottom-4 left-4 text-white">
+                    <h3 class="font-bold text-lg leading-tight">Siem Reap</h3>
+                    <p class="text-xs opacity-90">2,395 Tours</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="min-w-[150px] snap-start group/card cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg aspect-[3/4]">
+                <img src="images/warm-puntacana.png" 
+                     alt="Bali" class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="absolute bottom-4 left-4 text-white">
+                    <h3 class="font-bold text-lg">Punta Cana</h3>
+                    <p class="text-xs">2,659 Tours</p>
+                </div>
+            </div>
+        </div>
+
+                        <div class="min-w-[150px] snap-start group/card cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg aspect-[3/4]">
+                <img src="images/warm-phuket.png" 
+                     alt="Rio de Janeiro" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                
+                <div class="absolute bottom-4 left-4 text-white">
+                    <h3 class="font-bold text-lg leading-tight">Phuket</h3>
+                    <p class="text-xs opacity-90">1,863 Tours</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="min-w-[150px] snap-start group/card cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg aspect-[3/4]">
+                <img src="images/warm-aruba.png" 
+                     alt="Bali" class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="absolute bottom-4 left-4 text-white">
+                    <h3 class="font-bold text-lg">Aruba</h3>
+                    <p class="text-xs">445 Tours</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <button onclick="scrollDest(-300)" aria-label="Previous" 
+            class="absolute left-[-15px] top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-200 p-2 rounded-full shadow-md hidden md:group-hover:flex hover:bg-gray-50">
+        <svg width="14" height="14" viewBox="0 0 16 16" class="fill-current text-gray-700">
+            <path d="M10.66 4.28A.75.75 0 109.6 3.22L5.34 7.47c-.29.3-.29.77 0 1.06l4.26 4.25a.75.75 0 001.06-1.06L6.94 8l3.72-3.72z"></path>
+        </svg>
+    </button>
+
+    <button onclick="scrollDest(300)" aria-label="Next" 
+            class="absolute right-[-15px] top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-200 p-2 rounded-full shadow-md hidden md:group-hover:flex hover:bg-gray-50">
+        <svg width="14" height="14" viewBox="0 0 16 16" class="fill-current text-gray-700">
+            <path d="M5.34 4.28A.75.75 0 016.4 3.22l4.26 4.25c.29.3.29.77 0 1.06L6.4 12.78a.75.75 0 01-1.06-1.06L9.06 8 5.34 4.28z"></path>
+        </svg>
+    </button>
+</div>
+
+    <script src="script.js"></script>
+    </main>    
     <footer class="w-full bg-black py-12">
      <div class="flex flex-col max-w-5xl mx-auto px-8  items-center gap-11">
         <div class="flex gap-4 mt-4">
@@ -83,4 +486,7 @@
         </div>
      </div>   
     </footer>
+</body>
+    <!-- Footer -->
+
 </html>

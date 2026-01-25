@@ -10,29 +10,62 @@
 </head>
 <body>
     <!-- HEADER         -->
-    <header class="relative flex items-center justify-between px-4 md:px-8 py-3 bg-white border-b border-gray-200 text"> 
-        <div class="flex flex-1 items-center md:hidden">
-            <button aria-label="Open navigation menu" class="p-2 hover:bg-gray-100 rounded-lg cursor-pointer">
-            <i class="fa-solid fa-bars text-xl"></i>
-            </button>
-        </div>
+<header class="relative flex items-center justify-between px-4 md:px-8 py-3 bg-white border-b border-gray-200">
+  <!-- Mobile Hamburger -->
+  <div class="flex items-center md:hidden">
+    <button aria-label="Open navigation menu" class="p-2 hover:bg-gray-100 rounded-lg cursor-pointer" id="mobile-menu-button">
+      <i class="fa-solid fa-bars text-xl"></i>
+    </button>
+  </div>
 
-        <div class="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:flex-none flex items-center space-x-2">
-            <img src="images/Viator_logo.png" alt="Viator" class="h-5 md:h-8">
-            <button class="hidden md:block text-sm font-medium hover:text-green-700 whitespace-nowrap cursor-pointer">
-                Discover &gt;
-            </button>
-        </div>
+  <!-- Logo -->
+  <div class="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex items-center space-x-2">
+    <img src="images/Viator_logo.png" alt="Viator" class="h-5 md:h-8">
+    <button class="hidden md:block text-sm font-medium hover:text-green-700 whitespace-nowrap cursor-pointer">
+      Discover &gt;
+    </button>
+  </div>
+
+  <!-- Navigation Links (Desktop) -->
+  <nav class="hidden md:flex items-center space-x-6">
+    <a href="destinations.html" class="text-gray-700 hover:text-green-700 font-medium">Destinations</a>
+    <a href="activites.html" class="text-gray-700 hover:text-green-700 font-medium">Activities</a>
+  </nav>
+
+  <!-- Search & Profile -->
+  <div class="hidden md:flex items-center border rounded-full mx-8 px-4 py-2 w-full max-w-md">
+    <span class="text-gray-400 mr-2"><i class="fa-solid fa-magnifying-glass"></i></span>
+    <input type="text" placeholder="Search your direction" class="w-full outline-none text-sm">
+  </div>
 
   <div class="flex flex-1 items-center justify-end space-x-2 md:space-x-5">
-    <button aria-label="worldwide" class="hidden md:block hover:bg-gray-100 rounded-full"><i class="fa-solid fa-earth-africa"></i></button>
-    <button aria-label="rewards" class="hidden md:block hover:bg-gray-100 rounded-full"><i class="fa-solid fa-gift"></i></button>
-    
+    <button aria-label="worldwide" class="hidden md:block hover:bg-gray-100 rounded-full">
+      <i class="fa-solid fa-earth-africa"></i>
+    </button>
+    <button aria-label="rewards" class="hidden md:block hover:bg-gray-100 rounded-full">
+      <i class="fa-solid fa-gift"></i>
+    </button>
     <a href="login.html" aria-label="user-profile" class="flex items-center space-x-2 border border-gray-300 rounded-full px-4 py-2 hover:shadow-md cursor-pointer">
       <span class="text-lg"><i class="fa-solid fa-user"></i></span>
     </a>
   </div>
+
+  <!-- Mobile Menu (hidden by default) -->
+  <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white border-t border-gray-200 shadow-md hidden md:hidden">
+    <a href="destinations.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Destinations</a>
+    <a href="activites.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Activities</a>
+  </div>
 </header>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
 <div>
 
     <div  class="flex flex-nowrap overflow-x-auto whitespace-nowrap gap-2 px-2 ">
