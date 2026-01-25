@@ -30,7 +30,7 @@ h1 {
 
 .subtitle {
   font-size: 14px;
-  color: #777;
+  color: #4b5563;
   margin-bottom: 20px;
 }
 
@@ -60,7 +60,7 @@ h1 {
   width: 100%;
   padding: 16px;
   border-radius: 14px;
-  background: #0a8f6f;
+  background-color: #086f57;
   color: white;
   border: none;
   font-size: 18px;
@@ -73,7 +73,7 @@ h1 {
   align-items: center;
   gap: 10px;
   margin: 20px 0;
-  color: #aaa;
+  color: #6b7280;
 }
 
 .or-line::before,
@@ -81,7 +81,7 @@ h1 {
   content: "";
   flex: 1;
   height: 1px;
-  background: #ddd;
+  background: #9ca3af;
 }
 
 /* Social buttons */
