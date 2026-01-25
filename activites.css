@@ -1,0 +1,20 @@
+#s1:checked ~ #slideContainer {
+  transform: translateX(0%);
+}
+#s2:checked ~ #slideContainer {
+  transform: translateX(-33.3333%);
+}
+#s3:checked ~ #slideContainer {
+  transform: translateX(-66.6666%);
+}
+
+#s4:checked ~ #slideContainer2 {
+  transform: translateX(0%);
+}
+#s5:checked ~ #slideContainer2 {
+  transform: translateX(-33.3333%);
+}
+#s6:checked ~ #slideContainer2 {
+  transform: translateX(-66.6666%);
+}
+
